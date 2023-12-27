@@ -7,7 +7,7 @@ newNode.classList.add("form-control");
 newNode.classList.add("weField");
 newNode.classList.add("mt-2");
 newNode.setAttribute("rows", 3);
-newNode.setAttribute("placeholder","Enter here")
+newNode.setAttribute("placeholder","Enter here");
 
 let weOb=document.getElementById("we");
 let weAddButtonOb=document.getElementById("weAddButton");
@@ -22,7 +22,7 @@ newNode.classList.add("form-control");
 newNode.classList.add("eqField");
 newNode.classList.add("mt-2");
 newNode.setAttribute("rows", 3);
-newNode.setAttribute("placeholder","Enter here")
+newNode.setAttribute("placeholder","Enter here");
 
 let aqOb=document.getElementById("aq");
 let aqAddButtonOb=document.getElementById("aqAddButton");
@@ -38,7 +38,7 @@ function addNewIPField(){
     newNode.classList.add("ipField");
     newNode.classList.add("mt-2");
     newNode.setAttribute("rows", 3);
-    newNode.setAttribute("placeholder","Enter here")
+    newNode.setAttribute("placeholder","Enter here");
     
     let ipOb=document.getElementById("intsprojs");
     let ipAddButtonOb=document.getElementById("ipAddButton");
@@ -51,30 +51,30 @@ function addNewIPField(){
 function generateCV(){
     //console.log("Generating CV");
 
-    let nameField=document.getElementById('nameField').value;
+    let nameField=document.getElementById("nameField").value;
 
-    let nameT1=document.getElementById('nameT1')
+    let nameT1=document.getElementById("nameT1");
 
     nameT1.innerHTML=nameField;
 
     //direct
-    document.getElementById('nameT2').innerHTML=nameField;
+    document.getElementById("nameT2").innerHTML=nameField;
 
 
     //contacts
-    document.getElementById('contactT').innerHTML=document.getElementById('contactField').value;
+    document.getElementById("contactT").innerHTML=document.getElementById("contactField").value;
 
     //address
 
-    document.getElementById('addressT').innerHTML=document.getElementById('addressField').value;
+    document.getElementById("addressT").innerHTML=document.getElementById("addressField").value;
 
-    document.getElementById('fbT').innerHTML=document.getElementById('fbField').value;
+    document.getElementById("fbT").innerHTML=document.getElementById("fbField").value;
 
-    document.getElementById('instaT').innerHTML=document.getElementById('instaField').value;
+    document.getElementById("instaT").innerHTML=document.getElementById("instaField").value;
 
-    document.getElementById('linkedInT').innerHTML=document.getElementById('LinkedInField').value;
+    document.getElementById("linkedInT").innerHTML=document.getElementById("LinkedInField").value;
 
-    document.getElementById('hob1T').innerHTML=document.getElementById('hobbiesField').value;
+    document.getElementById("hob1T").innerHTML=document.getElementById("hobbiesField").value;
     
 
     //objective
@@ -117,18 +117,7 @@ function generateCV(){
 
     document.getElementById("intT").innerHTML=str2;
 
-    //code for setting image
-
-    let file=document.getElementById("imgField").files[0];
-    console.log(file);
-    let reader=new FileReader();
-    reader.readAsDataURL(file);
-    console.log(reader.result);
-    //set image to template
-
-    reader.onloadend=function(){
-        document.getElementById("imgTemplate").src=reader.result;
-    };
+    
 
     document.getElementById("cv-form").style.display="none";
     document.getElementById("cv-template").style.display="block";
